@@ -4,10 +4,11 @@ require 'pry'
 class App < Sinatra::Base
 
   get "/newteam" do
-    erb :newteam
+    erb :newteam #if someone comes to site /newteam, give newteam form to fill out
   end
 
-  post "/team" do #posting to team
+  post "/team" do #posting to team-team is not a url though
+    #once they click submit, data shows up here as params
     #alternative: @team = params pass just this in and then parse through in team
     @name = params[:name]
     @coach = params[:coach]
