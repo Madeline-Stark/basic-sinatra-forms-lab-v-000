@@ -7,7 +7,7 @@ class App < Sinatra::Base
     erb :newteam #if someone comes to site /newteam, give newteam form to fill out
   end
 
-  post "/team" do #posting to team-team is not a url though
+  post "/team" do #posting to team-team is not a url though, just showing data user entered
     #once they click submit, data shows up here as params
     #alternative: @team = params pass just this in and then parse through in team
     @name = params[:name]
@@ -17,7 +17,7 @@ class App < Sinatra::Base
     @pf = params[:pf]
     @sf = params[:sf]
     @c = params[:c]
-    erb :team #using these names to populate view
+    erb :team #rendering back to server, using these names to populate view
   end
 
 end
