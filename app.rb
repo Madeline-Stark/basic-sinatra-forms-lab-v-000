@@ -14,7 +14,7 @@ class App < Sinatra::Base
     @pf = params[:pf]
     @sf = params[:sf]
     @c = params[:c]
-    erb :team #using these names to populate view
+    #erb :team #using these names to populate view
   end
 
 end
