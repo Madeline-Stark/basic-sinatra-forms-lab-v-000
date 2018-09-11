@@ -8,8 +8,7 @@ class App < Sinatra::Base
   end
 
   post "/team" do #posting to team
-    binding.pry
-    @team = params
+    #@team = params pass just this in and then parse through in team
     @name = params[:name]
     @coach = params[:coach]
     @pg = params[:pg]
